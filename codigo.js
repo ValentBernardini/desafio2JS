@@ -1,33 +1,45 @@
+//calculadora Valentin Bernardini
+const sumar = (num1,num2) =>{
+    return (num1) + (num2)
+}
 
-//Desafio simulador interactivo Sistema de Asistencia
-let cantidad = prompt("cuanto alumnos son?");
+const restar = (num1,num2) =>{
+    return (num1) - (num2)
+}
 
- let alumnosTotales = [];
+const dividir = (num1,num2) =>{
+    return (num1) / (num2)
+}
 
- for (i = 0; i < cantidad; i++) {
-     alumnosTotales[i] = [prompt("nombre del alumno " + (i + 1)), 0];
+const multiplicar = (num1,num2) =>{
+    return (num1) * (num2)
+}
 
- }
+alert("Que operacion deseas realizar?");
+let operacion = prompt("1: suma, 2:resta, 3:division, 4:multiplicacion");
 
- const tomarAsistencia = (nombre, p) => {
-     let presencia = prompt(nombre);
-     if (presencia == "p" || presencia == "P") {
-         alumnosTotales[i][1]++;
-     }
- }
-
- for (i = 0; i < 30; i++) {
-     for (alumno in alumnosTotales) {
-         tomarAsistencia(alumnosTotales[alumno][0], alumno)
-     }
- }
-
- for (alumno in alumnosTotales) {
-     let resultado = `${alumnosTotales[alumnos][0]}:"<br>"
-     ________Presentes: ${alumnosTotales[alumno][1]} <br>
-     ________Ausencias: ${30 - alumnosTotales[alumnoalumno][alumno]}`;
-     if (30 - alumnosTotales[alumno][1] > 18) {
-         resultado += "Reprobado por inasistencia <br>";
-     }
-     document.write(resultado)
- }
+if (operacion == 1) {
+    let numero1 = prompt("primero numero para sumarr");
+    let numero2 = prompt("primero numero para sumar");
+    resultado = sumar(numero1,numero2);
+    alert("tu resultado es " , resultado);
+} 
+else if (operacion == 2) {
+    let numero1 = prompt("primero numero para restar");
+    let numero2 = prompt("primero numero para restar");
+    resultado = restar(numero1, numero2)
+    alert(`tu resultado es ${resultado}`);
+} 
+else if (operacion == 3) {
+    let numero1 = prompt("primero numero para dividir");
+    let numero2 = prompt("primero numero para dividir");
+    resultado = dividir(numero1, numero2)
+    alert(`tu resultado es ${resultado}`);
+}
+ else if (operacion == 4) {
+    let numero1 = prompt("primero numero para multi");
+    let numero2 = prompt("primero numero para multui");
+    resultado = multiplicar(numero1, numero2)
+    alert(`tu resultado es ${resultado}`);
+}
+else {alert("no se encontro la operacion")}
